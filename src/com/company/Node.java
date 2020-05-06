@@ -24,65 +24,7 @@ public class Node {
         return this.parent;
     }
 
-    public ArrayList<String> getPossibleStates(){
-        /*This Function will return all possible states you can get to from the parent node*/
 
-        ArrayList<String> possibleStates = new ArrayList<String>();
-
-        switch (this.state.indexOf('0')){ //finds where the blank is
-            case 0: { //only 2 moves if its in the upper left corner
-                //move right
-                //move down
-            }
-
-            case 1: { //upper middle
-                //move right
-                //move down
-                //move left
-            }
-
-            case 2: { //upper right
-                //move down
-                //move left
-            }
-
-            case 3: { //middle left
-                //move up
-                //move down
-                //move right
-            }
-
-            case 4: { //middle middle
-                //move up
-                //move down
-                //move left
-                //move right
-            }
-
-            case 5: { //middle right
-                //move up
-                //move down
-                //move left
-            }
-
-            case 6: { //lower left
-                //move up
-                //move right
-            }
-
-            case 7: { //lower middle
-                //move up
-                //move left
-                //move right
-            }
-
-            case 8: { //lower right
-                //move up
-                //move left
-            }
-        }
-
-    }
 
     public void printNode(){
         System.out.print('[');

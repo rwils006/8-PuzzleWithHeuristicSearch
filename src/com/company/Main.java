@@ -21,7 +21,7 @@ public class Main {
         } else if (user == '1'){
             String rootState = veryEasy;
             Problem p1 = new Problem(rootState);
-            p1.printCurrent();
+
 
         } else if (user == '2'){
 
