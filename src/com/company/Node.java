@@ -24,7 +24,9 @@ public class Node {
         return this.parent;
     }
 
-
+    public int getTotalCost(){
+        return this.totalCost;
+    }
 
     public void printNode(){
         System.out.print('[');
