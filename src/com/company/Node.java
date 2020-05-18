@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Node {
     private String state; //holds the state of the game board at this node
     private Node parent; //pointer to the parent node
-    private ArrayList<Node> children; //list of all the nodes children
 
     private int cost; //cost of getting to this node g(n)
     private int estimatedCost; //estimated cost of getting to goal h(n)
@@ -12,7 +11,9 @@ public class Node {
 
     public Node(String state){ //constructor
         this.state = state;
-        children = new ArrayList<Node>(); //create an empty list
+        cost = 0;
+        estimatedCost = 0;
+        totalCost = 0;
     }
 
     //methods for retrieving information about the node
@@ -26,6 +27,14 @@ public class Node {
 
     public int getTotalCost(){
         return this.totalCost;
+    }
+
+    public int getCost(){
+        return this.cost;
+    }
+
+    public int getEstimatedCost(){
+        return this.estimatedCost;
     }
 
     public void printNode(){
@@ -53,10 +62,8 @@ public class Node {
             }
         }
         System.out.println(']');
-    }
-
-    public void addChild(Node child){
-        this.children.add(child);
+        //System.out.print("Node Total Cost: ");
+        //System.out.println(this.totalCost);
     }
 
     public void setParent(Node parent){
@@ -74,4 +81,6 @@ public class Node {
     public void setTotalCost(){
         this.totalCost = this.cost + this.estimatedCost;
     }
+
+
 }
